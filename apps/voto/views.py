@@ -15,7 +15,7 @@ from .forms import Userform, PreguntaOpcionForm, PreguntaForm, PreguntaAbiertaFo
 
 
 def index_view(request):
-    queryset_list = Post.objects.all().order_by('creado')
+    queryset_list = Pregunta_Opcion.objects.all().order_by('fecha_creacion')
     paginator = Paginator(queryset_list, 3)
 
     page = request.GET.get('page')
