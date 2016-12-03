@@ -14,7 +14,7 @@ urlpatterns = [
 	url(r'^Crear_Pregunta_Abierta/$',Crear_Pregunta_Abierta.as_view(),name='Crear_Pregunta_Abierta'),
 	url(r'^PreguntaView/$',PreguntaView.as_view(),name='PreguntaView'),
 	url(r'^buscar2/$',buscar2,name='buscar2'),
-	url(r'^borrar_pregunta/$',name='borrar_pregunta'),
+	url(r'^borrar_pregunta/$',borrar_pregunta,name='borrar_pregunta'),
 	url(r'^actualizar_pregunta/$',actualizar_pregunta,name='actualizar_pregunta'),
 
 ]
