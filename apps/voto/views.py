@@ -15,20 +15,20 @@ from .forms import Userform, PreguntaOpcionForm, PreguntaForm, PreguntaAbiertaFo
 
 
 def index_view(request):
-    queryset_list = Post.objects.all().order_by('creado')
-    paginator = Paginator(queryset_list, 3)
+    # queryset_list = Post.objects.all().order_by('creado')
+    # paginator = Paginator(queryset_list, 3)
 
-    page = request.GET.get('page')
-    try:
-        queryset = paginator.page(page)
-    except PageNotAnInteger:
-        queryset = paginator.page(1)
-    except EmptyPage:
-        queryset = paginator.page(paginator.num_pages)
-        context = {
-            "object_list": queryset
-        }
-    return render(request, 'voto/index.html', context)
+    # page = request.GET.get('page')
+    # try:
+    #     queryset = Paginator.page(page)
+    # except PageNotAnInteger:
+    #     queryset = Paginator.page(1)
+    # except EmptyPage:
+    #     queryset = Paginator.page(paginator.num_pages)
+    #     context = {
+    #         "object_list": queryset
+    #     }
+    return render(request, 'voto/index.html')
 
 class signup(FormView):
     template_name='voto/signup.html'
